@@ -1,0 +1,23 @@
+
+
+default: &default
+  adapter: postgresql
+  
+  host: localhost
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  username: alex
+  password: qwerty123
+
+development:
+  <<: *default
+  database: school_development
+
+test:
+  <<: *default
+  database: school_test
+
+production:
+  <<: *default
+  database: school_production
