@@ -24,6 +24,7 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'bootstrap-select-rails'
 
+
 gem 'slim-rails'
 gem 'simple_form'
 gem 'cocoon'
