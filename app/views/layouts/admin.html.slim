@@ -9,6 +9,8 @@ html
     = javascript_include_tag 'admin', 'data-turbolinks-track': 'reload'
   body
   =render 'admin/shared/main_menu'
-   
-    = yield
+  .container
+    .row
+      .col-md-12 
+        = yield
 
