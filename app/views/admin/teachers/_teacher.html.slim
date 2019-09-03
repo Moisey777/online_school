@@ -1,4 +1,8 @@
 tr
+  td 
+   .btn-group-vertical role="group"
+     = link_to 'Edit', [:edit, :admin, teacher], class: 'btn btn-primary btn-sm' 
+     = link_to 'Destroy', [:admin, teacher], class: 'btn btn-danger btn-sm'
   td= teacher.first_name
   td= teacher.last_name
   td= teacher.description
