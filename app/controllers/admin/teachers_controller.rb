@@ -14,7 +14,7 @@ class Admin::TeachersController < Admin::BaseController
     if @teacher.save
       redirect_to admin_teachers_path, notice: 'Преподаватель успешно создан'
     else
-      flash.now[:alert] = 'Не удалось создать преподавателя'
+      flash.now[:alert] = 'Не удалось создать Преподавателя'
       render :new
     end
   end
@@ -23,6 +23,12 @@ class Admin::TeachersController < Admin::BaseController
   end
 
   def update
+    if @teacher.update(teacher_params)
+      redirect_to admin_teachers_path, notice: 'Преподаватель успешно отредактирован'
+    else
+      flash.now[:alert] = 'Не удалось отредактировать Преподавателя'
+      render :edit
+    end
   end
 
   def destroy
