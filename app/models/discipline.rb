@@ -1,4 +1,5 @@
 class Discipline < ApplicationRecord
-	
 
+	
+	
 end
