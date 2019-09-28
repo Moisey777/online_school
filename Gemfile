@@ -37,7 +37,7 @@ gem 'kaminari'
 
 gem 'bootstrap-kaminari-views'
 
-gem 'draper', github: 'drapergem/draper'
+gem 'draper'
 #gem 'ransack'
 
 gem 'devise'
