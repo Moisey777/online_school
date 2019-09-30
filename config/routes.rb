@@ -5,10 +5,15 @@ Rails.application.routes.draw do
   end
   namespace :admin do
   	root to: 'main#index'
-    get 'main/index'
+    
+    
     resources :teachers, exept: :show
     resources :disciplines, exept: :show
-    resources :courses, exept: :show
+    
+    resources :courses, exept: :show do
+    	resources :lessons, exept: :show
+    end
+
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -4,6 +4,7 @@ class Course < ApplicationRecord
   
   has_many :discipline_courses
   has_many :disciplines, through: :discipline_courses
+  has_many :lessons
 
   validates :name, presence: true
   validates :description, presence: true

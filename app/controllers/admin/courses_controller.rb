@@ -42,7 +42,7 @@ class Admin::CoursesController < Admin::BaseController
       redirect_to admin_courses_path, notice: 'Курс успешно удален'
     else  
       redirect_to admin_courses_path, alert: 'Не удалось удалить Курс' 
-      end   
+    end   
   end
 
   private
