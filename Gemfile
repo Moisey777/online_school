@@ -21,6 +21,7 @@ gem 'turbolinks', '~> 5'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 gem 'bootstrap-sass'
 gem 'bootstrap-select-rails'
@@ -51,6 +52,10 @@ gem 'state_machines-activerecord'
 #gem 'after_commit_queue'
 gem 'carrierwave'
 gem 'mini_magick'
+
+
+gem 'acts_as_list'
+
 
 
 

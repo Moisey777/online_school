@@ -6,10 +6,11 @@ table.table.table-striped
   thead
     tr
       th
+      th 
       th Название
       th Описание
       
-  tbody
+  tbody#lessons_sortable data-update-url=sort_admin_lessons_path
     = render @lessons
 
 = paginate @lessons, theme: 'twitter-bootstrap-3'

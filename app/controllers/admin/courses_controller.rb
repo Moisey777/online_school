@@ -8,7 +8,11 @@ class Admin::CoursesController < Admin::BaseController
 
   def new
     add_breadcrumb "Новый Курс", new_admin_course_path
+
     @course = Course.new
+    @course.sections.build
+
+
   end
 
   def create
@@ -18,6 +22,9 @@ class Admin::CoursesController < Admin::BaseController
       redirect_to admin_courses_path, notice: 'Курс успешно создан'
     else
       add_breadcrumb "Новый Курс", new_admin_course_path
+      @course.sections.build
+
+
       flash.now[:alert] = 'Не удалось создать Курс'
       render :new
     end
@@ -31,7 +38,9 @@ class Admin::CoursesController < Admin::BaseController
     if @course.update(course_params)
       redirect_to admin_courses_path, notice: 'Курс успешно отредактирован'
     else
-      add_breadcrumb "Редактировать #{@course.name}", [:edit,:admin, @course]      
+      add_breadcrumb "Редактировать #{@course.name}", [:edit,:admin, @course]
+      @course.sections.build
+            
       flash.now[:alert] = 'Не удалось отредактировать Курс', [:admin, @course]
       render :edit
     end

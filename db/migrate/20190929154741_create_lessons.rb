@@ -4,6 +4,9 @@ class CreateLessons < ActiveRecord::Migration[5.2]
 
     	t.string :name
       t.text :description
+      t.integer :position
+      t.references :course, foreign_key: true
+      t.index ["position"], name: "index_lessons_position"
 
       t.timestamps
     end
