@@ -40,6 +40,7 @@ gem 'bootstrap-kaminari-views'
 
 gem 'draper'
 #gem 'ransack'
+gem 'tinymce-rails'
 
 gem 'devise'
 
